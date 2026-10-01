@@ -10,6 +10,12 @@
       content="Easy — snap a meal, get the calories, and see a lighter version of the same food. Lose weight without giving up what you actually like eating."
     />
     <title>Easy — The last diet app you'll ever need</title>
+    <!-- The hero opens on the meal phone, and its clip cannot start downloading until React has
+         mounted and rendered the <video>. Asking for it here starts the fetch during the initial
+         HTML parse instead, which is the difference between the first scan playing and the first
+         scan showing its poster for a moment. Only the first clip: the rest are warmed a turn
+         ahead from Hero, by which point there is a whole turn to fetch them in. -->
+    <link rel="preload" as="video" href="/video/meal.webm" type="video/webm" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,9 +36,9 @@
     <meta name="twitter:description" content="Snap a meal, a menu or a grocery item. See the calories, get a lighter swap." />
     <meta name="twitter:image" content="https://joineasy.app/og.jpg" />
     <meta name="theme-color" content="#A98BEF" />
-    <script type="module" crossorigin src="/assets/main-BrdKHt9R.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/Footer-BhSTRPv_.js">
-    <link rel="stylesheet" crossorigin href="/assets/Footer-DB1L11Tp.css">
+    <script type="module" crossorigin src="/assets/main-CSgV-WKB.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/Footer-Ifh366fV.js">
+    <link rel="stylesheet" crossorigin href="/assets/Footer-DBtg8K1z.css">
   </head>
   <body>
     <div id="root"></div>
